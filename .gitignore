@@ -1,18 +1,11 @@
-# Secrets - NEVER commit these
 .env
 .streamlit/secrets.toml
-
-# Vector database (rebuilt automatically on startup)
 chroma_db/
-
-# Python
 venv/
 .venv/
 __pycache__/
 *.py[cod]
 *.egg-info/
-
-# OS / editor
 .DS_Store
 Thumbs.db
 .vscode/
