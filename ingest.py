@@ -6,8 +6,7 @@ embeds them locally with sentence-transformers, and stores them in a
 persistent ChromaDB collection.
 
 Run manually with:  python ingest.py
-It is also imported and called by app.py on startup (Streamlit Cloud wipes
-the filesystem on every restart, so the database has to be rebuilt there).
+It is also imported and called by app.py on startup 
 
 Safe to run repeatedly: it upserts with deterministic IDs, so re-running
 updates existing chunks instead of duplicating them.
@@ -67,7 +66,7 @@ def chunk_text(text: str, chunk_words: int = CHUNK_WORDS, overlap: int = CHUNK_O
 
 
 def build_chunks():
-    """Return (ids, texts, metadatas) ready for ChromaDB."""
+    """Return ids, texts, metadatas ready for ChromaDB."""
     ids, texts, metadatas = [], [], []
 
     for filename, text in load_documents():

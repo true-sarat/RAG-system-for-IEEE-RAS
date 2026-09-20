@@ -6,11 +6,9 @@ Retrieval-Augmented Generation core:
   query -> embed -> ChromaDB similarity search -> relevance filter
         -> Gemini answers using ONLY the retrieved chunks
 
-Design choices that matter:
+Design choices:
   * The collection handle is fetched fresh on each call (never cached), which
     avoids stale-handle errors when the app restarts or two users hit it at once.
-  * Chunks further away than RELEVANCE_DISTANCE_CUTOFF are dropped, so the
-    assistant says "I don't have that information" instead of hallucinating.
   * Every failure (missing key, quota, bad model name) returns a friendly
     message instead of crashing the Streamlit page with a red traceback.
 """
@@ -172,7 +170,7 @@ def answer_question(query: str, chat_history=None):
         model = genai.GenerativeModel(GEMINI_MODEL)
         response = model.generate_content(
             _build_prompt(query, relevant, chat_history),
-            generation_config={"temperature": 0.2, "max_output_tokens": 800},
+            generation_config={"temperature": 0.5, "max_output_tokens": 800},
         )
         answer = (getattr(response, "text", "") or "").strip() or NO_ANSWER_MESSAGE
     except Exception as exc:

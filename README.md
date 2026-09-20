@@ -4,9 +4,7 @@ A retrieval-augmented generation chatbot that answers questions about IEEE RAS u
 a curated local knowledge base rather than the language model's general training data.
 Every answer is grounded in retrieved passages, cites its sources, and the assistant
 says "I don't have that information" when nothing relevant is found.
-
-**Live app:** _add your Streamlit link here_
-**Repo:** _this repository_
+https://rag-system-for-ieee-ras-bzofxqiwc4txma5ra8wspc.streamlit.app
 
 ## Architecture
 
@@ -62,24 +60,18 @@ what should give a reply: "What is IEEE RAS?"
 what would give a "i don't know" reply:
      "What's the capital of France?"
 
-## Troubleshooting
 
-| Symptom | Cause / fix |
-|---|---|
-| `404 model not found` | Model name retired. Set `GEMINI_MODEL` in `.env` **and** in Streamlit Secrets to a current model from https://ai.google.dev/gemini-api/docs/models |
-| Quota / `ResourceExhausted` | Free-tier limit. Per-minute limits clear in ~60s; daily limits reset at midnight Pacific. Switching to `gemini-3.5-flash-lite` gives more headroom. |
-| "No Gemini API key is configured" | `.env` missing locally, or Secrets not saved on Streamlit Cloud. They are separate — updating one does not update the other. |
-| `Failed to send telemetry event` | Harmless ChromaDB analytics noise. Ignore it. |
-| Answer wrongly says "I don't have that information" | Raise `RELEVANCE_DISTANCE_CUTOFF` in `config.py` (cosine distance, 0–2; 0.75 default). Lower it to make the assistant stricter. |
 
-## Limitations and future work
+## Limitations 
 
-- Knowledge is limited to what's in `data/`; there is no live web access.
+- Knowledge is limited to what's in data; there is no live web access.
 - Chunking is word-count based; sentence-aware splitting would give cleaner boundaries.
 - Chat history resets on page reload.
-- A thumbs up/down control per answer would help identify weak retrieval cases.
+- high waiting time for each response 
+- very small token window
 
-## How RAG works, briefly
+
+## How RAG works
 
 Instead of asking a language model to answer from memory, RAG first retrieves the most
 relevant passages of real, trusted text and then asks the model to answer using only
