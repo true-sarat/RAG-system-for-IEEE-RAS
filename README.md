@@ -4,7 +4,8 @@ A retrieval-augmented generation chatbot that answers questions about IEEE RAS u
 a curated local knowledge base rather than the language model's general training data.
 Every answer is grounded in retrieved passages, cites its sources, and the assistant
 says "I don't have that information" when nothing relevant is found.
-https://rag-system-for-ieee-ras-bzofxqiwc4txma5ra8wspc.streamlit.app
+
+LIVE APP = https://rag-system-for-ieee-ras-bzofxqiwc4txma5ra8wspc.streamlit.app
 
 ## Architecture
 
