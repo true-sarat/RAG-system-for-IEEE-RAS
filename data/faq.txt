@@ -1,4 +1,13 @@
 SOURCE:https://www.ieee-ras.org/
+Q:What is IEEE RAS?
+A:The IEEE Robotics and Automation Society (IEEE RAS) is a professional organization that supports the development and exchange of scientific knowledge in robotics and automation, including both applied and theoretical issues. It was founded in 1984 as the Robotics and Automation Council and became the IEEE Robotics and Automation Society in 1987.
+Q:How do I join the chapter?
+A:To join an IEEE Robotics and Automation Society (RAS) chapter:
+
+    Become an IEEE member and add the IEEE Robotics and Automation Society membership to your account. RAS chapters are generally for IEEE RAS members.
+    ieee-ras.org
+    Find your local chapter using the IEEE RAS chapter directory or interactive chapter map.
+    Contact the chapter chair or officers through the chapter’s listing and ask about upcoming meetings, membership procedures, and volunteer opportunities.
 Q: Do I need robotics experience to join?
 A: No. Most student chapters welcome beginners and provide training through workshops and
 mentorship from senior members.
