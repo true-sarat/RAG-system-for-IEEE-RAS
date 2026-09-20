@@ -1,0 +1,52 @@
+SOURCE: https://www.ieee-ras.org/
+
+IEEE RAS (Robotics and Automation Society) is a professional society of IEEE dedicated to
+the fields of robotics and automation. It supports researchers, engineers, and students
+working on topics such as robot design, control systems, automation, AI-driven robotics,
+human-robot interaction, and industrial automation.
+
+IEEE RAS operates through a global network of local chapters based at universities and
+companies. Student chapters organize workshops, hands-on project sessions, technical talks,
+robotics competitions, and networking events for members. Many chapters also run mentorship
+programs connecting senior members with newer students.
+
+The Society publishes research through IEEE Xplore, including journals and conference
+proceedings, and sponsors major international conferences in robotics and automation.
+
+
+About RAS
+The IEEE Robotics and Automation Society’s objectives are scientific, literary and educational in character. The Society strives for the advancement of the theory and practice of robotics and automation engineering and science and of the allied arts and sciences, and for the maintenance of high professional standards among its members, all in consonance with the Constitution and Bylaws of the IEEE and with special attention to such aims within the Field of Interest of the Society. Our Mission is to foster the development and facilitate the exchange of scientific and technological knowledge in Robotics and Automation that benefits members, the profession and humanity. Our Vision is to be the most recognized and respected global organization in Robotics and Automation.
+IEEE Robotics & Automation Society: Executive and Administrative Committee (2025)
+
+RAS strives to advance innovation, education, and fundamental and applied research in robotics and automation. Robotics focuses on systems incorporating sensors and actuators that operate autonomously or semi-autonomously in cooperation with humans. Robotics research emphasizes intelligence and adaptability to cope with unstructured environments. Automation research emphasizes efficiency, productivity, quality, and reliability, focusing on systems that operate autonomously, often in structured environments over extended periods, and on the explicit structuring of such environments.
+
+Image: IEEE Robotics & Automation Society: Executive and Administrative Committees (2025)
+Governance Overview
+From Council to Society, by Antal (Tony) Bejczy
+
+The year 2007 can be considered the 20th year of existence of the IEEE Robotics and Automation Society (RAS). It might be then useful for the younger generation to know how the birth of RAS came about. I was very close to the RAS™s birth because my position as President of the IEEE Robotics and Automation Council (RAC) in 1987 required me to assist in the transition from Council to Society. I prepared the following brief notes based on my 1983-1989 IEEE files.
+
+The initial IEEE Robotics and Automation (R&A) entity, the RAC, was founded in 1984, led by George Saridis, who was elected the first RAC President. The existence of the council was justified by the growing number of R&A papers, tutorial and workshop proposals submitted to the IEEE Control Systems Society (CSS), the Computer Society, and other journals and by the overall growing interest in industrial and R&D-oriented R&A.
+
+Unlike IEEE societies, whose membership is made up of individual IEEE members, the members of IEEE Councils are societies. The eight founding societies of the RAC were Aerospace and Electronic Systems; Circuits and Systems; Components, Hybrids, and Manufacturing Technology; Computers; Control Systems; Industrial Electronics; Industry Applications; and Systems, Man and Cybernetics. Saridis and many others of the original RAC officers were from CSS, where I had previously chaired the CSS R&A Committee. The representatives of the eight sponsoring societies constituted the voting members of the Council Administrative Committee (AdCom), and occasional nonvoting observers or guests participated in RAC meetings. The RAC was established to provide focus for IEEE activities in the R&A field. The Council authorities, procedures, and duties were formulated in a Constitution and Bylaws following IEEE standards and rules. The Council had two meetings per year, chaired by the Council President elected each year by the RAC AdCom.
+
+The RAC initiated and sponsored three major activities and products to help create accessible and measurable data and impressions for R&A interests within IEEE and even beyond:
+
+    IEEE Journal of Robotics and Automation, edited by George Bekey
+    IEEE RAC Newsletter (which later became IEEE Robotics and Automation Magazine), edited by Wesley Snyder
+    IEEE International Conferences on R&A (ICRA).Annual, starting in Atlanta, GA, in 1984 (under the IEEE Computer Society Technical Committee (TC) on Robotics); then in St. Louis, MO, in 1985; in San Francisco, CA, in 1986; in Raleigh, NC, in 1987; and in Philadelphia, PA, in 1988.
+
+
+From Council to Society, by Antal (Tony) Bejczy
+
+The year 2007 can be considered the 20th year of existence of the IEEE Robotics and Automation Society (RAS). It might be then useful for the younger generation to know how the birth of RAS came about. I was very close to the RAS™s birth because my position as President of the IEEE Robotics and Automation Council (RAC) in 1987 required me to assist in the transition from Council to Society. I prepared the following brief notes based on my 1983-1989 IEEE files.
+
+The initial IEEE Robotics and Automation (R&A) entity, the RAC, was founded in 1984, led by George Saridis, who was elected the first RAC President. The existence of the council was justified by the growing number of R&A papers, tutorial and workshop proposals submitted to the IEEE Control Systems Society (CSS), the Computer Society, and other journals and by the overall growing interest in industrial and R&D-oriented R&A.
+
+Unlike IEEE societies, whose membership is made up of individual IEEE members, the members of IEEE Councils are societies. The eight founding societies of the RAC were Aerospace and Electronic Systems; Circuits and Systems; Components, Hybrids, and Manufacturing Technology; Computers; Control Systems; Industrial Electronics; Industry Applications; and Systems, Man and Cybernetics. Saridis and many others of the original RAC officers were from CSS, where I had previously chaired the CSS R&A Committee. The representatives of the eight sponsoring societies constituted the voting members of the Council Administrative Committee (AdCom), and occasional nonvoting observers or guests participated in RAC meetings. The RAC was established to provide focus for IEEE activities in the R&A field. The Council authorities, procedures, and duties were formulated in a Constitution and Bylaws following IEEE standards and rules. The Council had two meetings per year, chaired by the Council President elected each year by the RAC AdCom.
+
+The RAC initiated and sponsored three major activities and products to help create accessible and measurable data and impressions for R&A interests within IEEE and even beyond:
+
+    IEEE Journal of Robotics and Automation, edited by George Bekey
+    IEEE RAC Newsletter (which later became IEEE Robotics and Automation Magazine), edited by Wesley Snyder
+    IEEE International Conferences on R&A (ICRA).Annual, starting in Atlanta, GA, in 1984 (under the IEEE Computer Society Technical Committee (TC) on Robotics); then in St. Louis, MO, in 1985; in San Francisco, CA, in 1986; in Raleigh, NC, in 1987; and in Philadelphia, PA, in 1988.
