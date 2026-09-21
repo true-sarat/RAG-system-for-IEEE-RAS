@@ -1,31 +1,13 @@
-"""
-ingest.py
----------
-Reads every .txt / .md file in data/, splits it into overlapping chunks,
-embeds them locally with sentence-transformers, and stores them in a
-persistent ChromaDB collection.
-
-Run manually with:  python ingest.py
-It is also imported and called by app.py on startup 
-
-Safe to run repeatedly: it upserts with deterministic IDs, so re-running
-updates existing chunks instead of duplicating them.
-"""
-
 import hashlib
 import os
 
-import chromadb
-from chromadb.utils import embedding_functions
+from config import COLLECTION_NAME, DATA_DIR, DB_DIR, EMBED_MODEL_NAME, get_client, get_embed_fn
 
-from config import COLLECTION_NAME, DATA_DIR, DB_DIR, EMBED_MODEL_NAME
-
-CHUNK_WORDS = 220      # ~ a few sentences; small chunks retrieve more precisely
-CHUNK_OVERLAP = 40     # overlap keeps sentences from being cut mid-thought
+CHUNK_WORDS = 220
+CHUNK_OVERLAP = 40
 
 
 def load_documents(data_dir: str = DATA_DIR):
-    """Return a list of (filename, text) for every text file in data/."""
     docs = []
     if not os.path.isdir(data_dir):
         raise FileNotFoundError(
@@ -49,7 +31,6 @@ def load_documents(data_dir: str = DATA_DIR):
 
 
 def chunk_text(text: str, chunk_words: int = CHUNK_WORDS, overlap: int = CHUNK_OVERLAP):
-    """Split text into overlapping word-count chunks."""
     words = text.split()
     if not words:
         return []
@@ -66,13 +47,10 @@ def chunk_text(text: str, chunk_words: int = CHUNK_WORDS, overlap: int = CHUNK_O
 
 
 def build_chunks():
-    """Return ids, texts, metadatas ready for ChromaDB."""
     ids, texts, metadatas = [], [], []
 
     for filename, text in load_documents():
         for i, chunk in enumerate(chunk_text(text)):
-            # Deterministic ID: same content + position -> same ID, so an
-            # upsert overwrites instead of creating duplicates.
             digest = hashlib.md5(f"{filename}:{i}:{chunk}".encode("utf-8")).hexdigest()
             ids.append(digest)
             texts.append(chunk)
@@ -82,29 +60,22 @@ def build_chunks():
 
 
 def main():
-    """Build (or refresh) the vector database. Returns the number of chunks."""
     print(f"Loading and chunking documents from {DATA_DIR}/ ...")
     ids, texts, metadatas = build_chunks()
     print(f"  -> {len(texts)} chunks")
 
     print(f"Loading local embedding model ({EMBED_MODEL_NAME}) ...")
-    embed_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name=EMBED_MODEL_NAME
-    )
+    embed_fn = get_embed_fn()
 
-    os.makedirs(DB_DIR, exist_ok=True)
     print(f"Writing to persistent ChromaDB at '{DB_DIR}' ...")
-    client = chromadb.PersistentClient(path=DB_DIR)
+    client = get_client()
 
-    # get_or_create (never delete) — deleting mid-flight is what caused the
-    # "Collection does not exist" / InvalidCollectionException races.
     collection = client.get_or_create_collection(
         name=COLLECTION_NAME,
         embedding_function=embed_fn,
         metadata={"hnsw:space": "cosine"},
     )
 
-    # Upsert in batches so large knowledge bases don't blow up memory.
     batch = 64
     for start in range(0, len(ids), batch):
         collection.upsert(
@@ -113,8 +84,9 @@ def main():
             metadatas=metadatas[start:start + batch],
         )
 
-    print(f"Done. Collection '{COLLECTION_NAME}' now holds {collection.count()} chunks.")
-    return collection.count()
+    total = collection.count()
+    print(f"Done. Collection '{COLLECTION_NAME}' now holds {total} chunks.")
+    return total
 
 
 if __name__ == "__main__":
