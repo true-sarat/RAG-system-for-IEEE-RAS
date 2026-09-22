@@ -1,6 +1,5 @@
 import streamlit as st
 
-# Must be the very first Streamlit call in the file.
 st.set_page_config(
     page_title="IEEE RAS Assistant",
     page_icon="🤖",
