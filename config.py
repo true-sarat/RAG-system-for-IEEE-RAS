@@ -13,7 +13,7 @@ DB_DIR = os.path.join(tempfile.gettempdir(), "ieee_ras_chroma_db")
 COLLECTION_NAME = "ieee_ras_knowledge"
 EMBED_MODEL_NAME = "all-MiniLM-L6-v2"
 TOP_K = 3
-RELEVANCE_DISTANCE_CUTOFF = 0.75
+RELEVANCE_DISTANCE_CUTOFF = 1.5
 
 
 def get_secret(name: str, default: str | None = None) -> str | None:
