@@ -24,10 +24,7 @@ except Exception as exc:
 from rag_engine import answer_question  # noqa: E402
 
 SUGGESTED_QUESTIONS = [
-    "What is IEEE RAS?",
-    "How do I join the chapter?",
-    "What events does the chapter run?",
-    "Do I need robotics experience to join?",
+    "What is IEEE RAS?"
 ]
 
 with st.sidebar:
